@@ -1,3 +1,5 @@
+![](https://img.shields.io/github/size/nergel3/svelte-moving-div/src/index.svelte)
+![](https://img.shields.io/npm/v/svelte-moving-div?color=green)
 # Svelte-moving-div
 
 > A moving component for svelte js
