@@ -8,7 +8,7 @@
 
 Check the basc example.
 
-![gif example](https://github.com/Nergel3/svelte-moving-div/blob/master/resources/example.gif)
+![gif example](https://raw.githubusercontent.com/Nergel3/svelte-moving-div/master/resources/example.gif)
 
 ### Live demo
 
