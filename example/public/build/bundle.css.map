@@ -1,8 +1,14 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [],
-  "sourcesContent": [],
+  "sources": [
+    "../../index.svelte",
+    "../../App.svelte"
+  ],
+  "sourcesContent": [
+    "<div\n  bind:this={movingDiv}\n  on:mouseenter={trackMouse}\n  on:mousemove={updatePosition}\n  on:mouseleave={resetPosition}\n  class=\"moving-div\"\n>\n  <div bind:this={innerDiv} class=\"inner-div\">\n    <slot />\n  </div>\n</div>\n\n<script>\nlet mouse = {\n  x: 0,\n  y: 0\n};\n\nlet movingDiv,\n  innerDiv\n\n// Track the mouse when it hover the moving div\nfunction trackMouse() {\n  movingDiv.addEventListener('mousemove', setMouse);\n}\n\nfunction setMouse(event) {\n  mouse.x = event.clientX;\n  mouse.y = event.clientY;\n}\n\nfunction updatePosition() {\n  if (isHover(movingDiv)) {\n    const { top, left } = movingDiv.getBoundingClientRect(),\n      centerX = left + movingDiv.offsetWidth / 2,\n      centerY = top + movingDiv.offsetHeight / 2,\n      elPosX = (mouse.x - centerX) / 2,\n      elPosY = (mouse.y - centerY) / 2;\n\n    innerDiv.style.transform = `translate3d(${elPosX}px, ${elPosY}px, 0)`;\n    requestAnimationFrame(updatePosition);\n  } else {\n    resetPosition();\n  }\n}\n// Reset the moving div postion.\nfunction resetPosition() {\n  movingDiv.removeEventListener('mousemove', setMouse);\n  innerDiv.style.transform = 'translate3d(0, 0, 0)';\n}\n\n// Return if the given element is hovered\nfunction isHover(e) {\n  return e.parentElement.querySelector(':hover') === e;\n}\n\n</script>\n\n<style>\n.moving-div {\n  width: fit-content;\n  cursor: pointer;\n}\n\n.moving-div > .inner-div {\n  position: relative;\n  pointer-events: none;\n  transform: translate3d(0, 0, 0);\n}\n</style>",
+    "<main>\n\t<MovingDiv>\n\t\t<h1>\n\t\t\tHello World !\n\t\t</h1>\n\t</MovingDiv>\n</main>\n\n<script>\nimport MovingDiv from 'svelte-moving-div';\n</script>\n\n<style>\n/* Extending the the moving div */\n:global(.moving-div) {\n  padding: 2rem;\n}\n\n\n/* Adding transition to slow down */\n:global(.moving-div) > :global(.inner-div) {\n  transition: transform .4s cubic-bezier(.04, .48, .98, .8)\n}\n</style>"
+  ],
   "names": [],
-  "mappings": ""
+  "mappings": "AA2DA,WAAW,4BAAC,CAAC,AACX,KAAK,CAAE,WAAW,CAClB,MAAM,CAAE,OAAO,AACjB,CAAC,AAED,yBAAW,CAAG,UAAU,cAAC,CAAC,AACxB,QAAQ,CAAE,QAAQ,CAClB,cAAc,CAAE,IAAI,CACpB,SAAS,CAAE,YAAY,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,AACjC,CAAC;ACtDO,WAAW,AAAE,CAAC,AACpB,OAAO,CAAE,IAAI,AACf,CAAC,AAIO,WAAW,AAAC,CAAW,UAAU,AAAE,CAAC,AAC1C,UAAU,CAAE,SAAS,CAAC,GAAG,CAAC,aAAa,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,EAAE,CAAC;AAC3D,CAAC"
 }

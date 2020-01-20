@@ -17,6 +17,6 @@
   },
   "dependencies": {
     "sirv-cli": "^0.4.4",
-    "svelte-moving-div": "1.0.1"
+    "svelte-moving-div": "1.0.2"
   }
 }
