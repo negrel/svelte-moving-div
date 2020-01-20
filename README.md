@@ -13,7 +13,7 @@
 ### Installation
 
 ```
-npm install --save-dev svelte-mui
+npm install svelte-moving-div
 ```
 
 ### Getting started
