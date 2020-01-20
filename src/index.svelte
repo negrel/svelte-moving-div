@@ -56,13 +56,15 @@ function isHover(e) {
 
 </script>
 
-<style lang="sass">
-.moving-div
-  width: fit-content
-  cursor: pointer
+<style>
+.moving-div {
+  width: fit-content;
+  cursor: pointer;
+}
 
-  & .inner-div
-    position: relative
-    pointer-events: none
-    transform: translate3d(0, 0, 0)
+.moving-div > .inner-div {
+  position: relative;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+}
 </style>
