@@ -4,6 +4,8 @@
 
 > A moving component for svelte js
 
+![gif example](https://github.com/Nergel3/svelte-moving-div/blob/master/resources/example.gif)
+
 ### Live demo
 
 > Coming soon !
