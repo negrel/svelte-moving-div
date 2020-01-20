@@ -4,6 +4,10 @@
 
 > A moving component for svelte js
 
+### Example
+
+Check the basc example.
+
 ![gif example](https://github.com/Nergel3/svelte-moving-div/blob/master/resources/example.gif)
 
 ### Live demo
