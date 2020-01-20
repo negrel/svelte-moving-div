@@ -1,5 +1,5 @@
-.moving-div.svelte-erdk1g.svelte-erdk1g{width:fit-content;cursor:pointer}.moving-div.svelte-erdk1g>.inner-div.svelte-erdk1g{position:relative;pointer-events:none;transform:translate3d(0, 0, 0)}
 .moving-div{padding:2rem}.moving-div>.inner-div{transition:transform .4s cubic-bezier(.04, .48, .98, .8)
 }
+.moving-div.svelte-erdk1g.svelte-erdk1g{width:fit-content;cursor:pointer}.moving-div.svelte-erdk1g>.inner-div.svelte-erdk1g{position:relative;pointer-events:none;transform:translate3d(0, 0, 0)}
 
 /*# sourceMappingURL=bundle.css.map */
