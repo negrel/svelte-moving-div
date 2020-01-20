@@ -4,3 +4,6 @@ yarn.lock
 package-lock.json
 index.js
 index.mjs
+
+example/node_modules
+example/package-lock.json
