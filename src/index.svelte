@@ -66,6 +66,6 @@ function isHover(e) {
   position: relative;
   pointer-events: none;
   transform: translate3d(0, 0, 0);
-  transition: transform 1s;
+  transition: transform .25s;
 }
 </style>
