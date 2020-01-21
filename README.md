@@ -6,13 +6,9 @@
 
 ### REPL Example
 
-Check the basic [example](https://svelte.dev/repl/73274fbd734d4164ab7fd281b84f5644?version=3.17.2).
+Check the basic [REPL example](https://svelte.dev/repl/73274fbd734d4164ab7fd281b84f5644?version=3.17.2).
 
 ![gif example](https://raw.githubusercontent.com/Nergel3/svelte-moving-div/master/resources/example.gif)
-
-### Live demo
-
-> Coming soon !
 
 ### Installation
 
