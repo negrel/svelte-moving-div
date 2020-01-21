@@ -19,29 +19,26 @@ npm install svelte-moving-div
 ### Getting started
 
 ```svelte
-<main>
-	<MovingDiv>
-		<h1>
-			Hello World !
-		</h1>
-	</MovingDiv>
-</main>
-
 <script>
-import MovingDiv from 'svelte-moving-div';
+	// Example of svelte-moving-div component.
+	// After 'npm install svelte-moving-div' you can use it :
+	import MovingDiv from 'svelte-moving-div';
 </script>
 
+<MovingDiv>
+	<h1>Hello World !</h1>
+</MovingDiv>
+
 <style>
-/* Extending the the moving div */
-:global(.moving-div) {
-  padding: 2rem;
-}
-
-
-/* Adding transition to slow down */
-:global(.moving-div) > :global(.inner-div) {
-  transition: transform .4s cubic-bezier(.04, .48, .98, .8)
-}
+	/* Bigger margin */
+	:global(.moving-div) {
+		padding: 2rem 5rem
+	}
+	
+	/* Custom transition speed */
+	:global(.moving-div > .inner-div) {
+		transition: transform .25s!important
+	}
 </style>
 ```
 
